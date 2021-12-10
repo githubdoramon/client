@@ -201,7 +201,6 @@ export const networkConfigs = {
       live: true,
     },
   },
-
   [chains.getChainInformation(1666600000).type]: {
     isActive: true,
     enableMigrateBanner: false,
@@ -284,6 +283,25 @@ export const networkConfigs = {
           onTimeout: false,
         },
       },
+    },
+  },
+
+  [chains.getChainInformation(588).type]: {
+    isActive: true,
+    addresses: {
+      ensRegistry:
+        localEnsRegistryAddress || '0x3bad2cb086338fe452a67a38c9336ab879bca4d7',
+      governExecutorProxy: null,
+    },
+    nodes: {
+      defaultEth: 'wss://stardust-ws.metis.io/',
+    },
+    connectGraphEndpoint: null,
+    settings: {
+      chainId: 588,
+      testnet: true,
+      ...chains.getChainInformation(588),
+      live: true,
     },
   },
 
